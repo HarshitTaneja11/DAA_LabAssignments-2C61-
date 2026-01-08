@@ -5,7 +5,7 @@ using namespace std;
 
 int partition(vector<int> &arr, int start, int end)
 {
-    int idx = start - 1;
+    int i = start - 1;
     int pivot = arr[end];
     for (int j = start; j < end; j++)
     {
@@ -13,17 +13,17 @@ int partition(vector<int> &arr, int start, int end)
         {
             idx++;
             int temp = arr[j];
-            arr[j] = arr[idx];
-            arr[idx] = temp;
+            arr[j] = arr[i];
+            arr[i] = temp;
         }
     }
 
-    idx++;
+    i++;
     int temp = arr[end];
-    arr[end] = arr[idx];
-    arr[idx] = temp;
+    arr[end] = arr[i];
+    arr[i] = temp;
 
-    return idx;
+    return i;
 }
 
 void QS(vector<int> &arr, int start, int end)
