@@ -41,11 +41,11 @@ void merge(vector<int> &arr, int start, int mid, int end)
 
 void MergeSort(vector<int> &arr, int start, int end)
 {
-    if (start < end) /// run till just before start and end index become equal
+    if (start < end) 
     {
         int mid = start + (end - start) / 2;
-        MergeSort(arr, start, mid);     // Left half
-        MergeSort(arr, (mid + 1), end); // RIght Half
+        MergeSort(arr, start, mid);     
+        MergeSort(arr, (mid + 1), end); 
 
         merge(arr, start, mid, end);
     }
